@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ListaTareasComponent } from './componentes/lista-tareas/lista-tareas.component';
 
 @Component({
-  imports: [],
   selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
+  standalone: true,
+  imports: [ListaTareasComponent],
+  template: `<app-lista-tareas></app-lista-tareas>`
 })
-export class App {
-  protected readonly title = signal('eventos-angular-demo');
-}
+export class AppComponent {}
